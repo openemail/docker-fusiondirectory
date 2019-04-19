@@ -20,7 +20,7 @@ RUN set -x && \
             coreutils \
             build-base \
             make \
-            perl-dev \99
+            perl-dev \
             && \
     \
 ## Run Dependencies Installation
@@ -37,14 +37,14 @@ RUN set -x && \
         perl-file-copy-recursive \
         perl-io-socket-ssl \
         perl-json \
-        perl-net-ldap \
+        perl-net-ldap \https://github.com/openemail/docker-fusiondirectory.git
         perl-path-class \
         perl-term-readkey \
         perl-xml-twig \
         && \
       \        
 ### Install Perl Dependencies that aren't available as packages
-      ln -s /usr/bin/perl /usr/local/bin/perl && \
+      ln -s /usr/bin/perl /usr/local/bin/perl && \https://github.com/openemail/docker-fusiondirectory.git
       curl -L http://cpanmin.us -o /usr/bin/cpanm && \
       chmod +x /usr/bin/cpanm && \
       cpanm -n \
