@@ -44,7 +44,7 @@ RUN set -x && \
         && \
       \        
 ### Install Perl Dependencies that aren't available as packages
-      ln -s /usr/bin/perl /usr/local/bin/perl && \https://github.com/openemail/docker-fusiondirectory.git
+      ln -s /usr/bin/perl /usr/local/bin/perl && \
       curl -L http://cpanmin.us -o /usr/bin/cpanm && \
       chmod +x /usr/bin/cpanm && \
       cpanm -n \
