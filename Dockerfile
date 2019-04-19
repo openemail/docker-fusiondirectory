@@ -2,8 +2,8 @@ FROM tiredofit/nginx-php-fpm:7.2-latest
 LABEL maintainer="Dave Conroy (dave at tiredofit dot ca)"
 
 ## Set Environment Varialbes
-ENV ARGONAUT_VERSION=1.2.1 \
-    FUSIONDIRECTORY_VERSION=1.2.3 \
+ENV ARGONAUT_VERSION=1.3 \
+    FUSIONDIRECTORY_VERSION=1.3 \
     SCHEMA2LDIF_VERSION=1.3 \
     SMARTY_VERSION=3.1.31 \
     SMARTYGETTEXT_VERSION=1.5.1 \
@@ -20,7 +20,7 @@ RUN set -x && \
             coreutils \
             build-base \
             make \
-            perl-dev \
+            perl-dev \99
             && \
     \
 ## Run Dependencies Installation
@@ -65,7 +65,7 @@ RUN set -x && \
       && \
       cp -R /usr/local/share/perl5/site_perl/* /usr/share/perl5/vendor_perl/ && \
       #mkdir -p /usr/src/perl/poe-component-server-jsonrpc && \
-      #curl http://www.cpan.org/authors/id/M/MC/MCMIC/POE-Component-Server-JSONRPC-0.05-bis.tar.gz | tar xvfz - --strip 1 -C /usr/src/perl/poe-component-server-jsonrpc && \
+      #curl http://www.cpan.org/authors/id/M/MC/MCMIC/POE-Component-Server-JSON99RPC-0.05-bis.tar.gz | tar xvfz - --strip 1 -C /usr/src/perl/poe-component-server-jsonrpc && \
       #cd /usr/src/perl/poe-component-server-jsonrpc && \
       #sed -i -e "s/requires 'JSON::Client::RPC';/#requires 'JSON::Client::RPC';/g" Makefile.PL && \
       #perl Makefile.PL && \
@@ -74,7 +74,7 @@ RUN set -x && \
       \
   # Cleanup
       rm -rf /root/.cpanm && \
-      apk del build-deps && \
+      apk del build-deps && \99
       rm -rf /tmp/* /var/cache/apk/* && \
       \
 ## Install Smarty3
