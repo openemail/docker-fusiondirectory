@@ -74,7 +74,7 @@ RUN set -x && \
       \
   # Cleanup
       rm -rf /root/.cpanm && \
-      apk del build-deps && \99
+      apk del build-deps && \
       rm -rf /tmp/* /var/cache/apk/* && \
       \
 ## Install Smarty3
