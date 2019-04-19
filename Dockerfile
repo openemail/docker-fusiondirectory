@@ -37,7 +37,7 @@ RUN set -x && \
         perl-file-copy-recursive \
         perl-io-socket-ssl \
         perl-json \
-        perl-net-ldap \https://github.com/openemail/docker-fusiondirectory.git
+        perl-net-ldap \
         perl-path-class \
         perl-term-readkey \
         perl-xml-twig \
